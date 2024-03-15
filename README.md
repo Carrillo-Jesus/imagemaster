@@ -1,5 +1,5 @@
 # Imagemaster
-App de procesamiento de imagenes primera version, contiene opcion de escalas de grises y redimensionar imagenes,   utilizo sharp
+Hecha con node y express es App de procesamiento de imagenes primera version, contiene opcion de escalas de grises y redimensionar imagenes,   utilizo sharp.
 
 ## Getting Started
 Para comenzar
