@@ -1,7 +1,35 @@
 # Imagemaster
-Hecha con node y express es App de procesamiento de imagenes primera version, contiene opcion de escalas de grises y redimensionar imagenes,   utilizo sharp.
+Hecha con node y express es App de procesamiento de imagenes (segunda version).
+
+# Documentación para Funciones de Procesamiento de Imágenes.
+
+## (consultar imagen GET) http://localhost:3000/uploads/nameimage.ext
+
+Esta se encarga de procesar y servir imágenes según los parámetros de consulta proporcionados. Acepta un objeto de 
+
+### Parámetros de Consulta:
+- `width` (opcional): Ancho deseado de la imagen.
+- `height` (opcional): Altura deseada de la imagen.
+- `grayscale` (opcional): Bandera para convertir la imagen a escala de grises. Acepta valores: 'true', '1', 'on', 'yes', 'y'.
+- `fit` (opcional): Especifica cómo debe ajustarse la imagen dentro de las dimensiones especificadas. Opciones válidas: 'cover', 'contain', 'fill', 'inside', 'outside'.
+- `rotate` (opcional): Ángulo de rotación para la imagen (en grados).
+- `flop` (opcional): Bandera para voltear horizontalmente la imagen. Acepta valores: 'true', '1', 'on', 'yes', 'y'.
+- `flip` (opcional): Bandera para voltear verticalmente la imagen. Acepta valores: 'true', '1', 'on', 'yes', 'y'.
+- `negative` (opcional): Bandera para crear un negativo de la imagen. Acepta valores: 'true', '1', 'on', 'yes', 'y'.
+- `blur` (opcional): Intensidad del efecto de desenfoque a aplicar a la imagen (entre 0.3 y 1000).
+
+### Retorna:
+- Imagen procesada basada en los parámetros de consulta proporcionados.
+- Si no hay parámetros, retorna la imagen original.
+
+## (Guardar imagen POST) http://localhost:3000/uploads/[name-imagen]
+
+### Retorna:
+- Objeto de estado que contiene el estado de la operación de guardado y el tamaño de la imagen guardada.
+
 
 ## Getting Started
+
 Para comenzar
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para fines de desarrollo y pruebas.
 
@@ -40,29 +68,4 @@ reemplaza [name-imagen] por el nombre de tu imagen, recuerda ubicarte en la carp
 ```
 
 #### Otra opción es pegar una imagen en uploads y consultar con el nombre de la imagen.
-
-
-###consultar imagenes en este ejemplo con un archivo jpg, recuerda poner el que subiste
-
-Aquí están las diferentes rutas que puedes consultar en el navegador
-
-Imagen normal: 
-
-```
- http://localhost:3000/uploads/jesu.jpg
-```
-Escalas de grises:
-
-```
- http://localhost:3000/uploads/bw-jesu.jpg
-```
-
-Modificando tamaño
-```
- http://localhost:3000/uploads/200x_-bw-jesu.jpg
-```
-
-## Puedes consultar el archivos routes para ver las demás rutas, son 8 combinaciones en total.
-
-
 
