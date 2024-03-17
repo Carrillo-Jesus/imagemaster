@@ -1,5 +1,5 @@
 # Imagemaster
-Hecha con node y express es App de procesamiento de imagenes (segunda version).
+Image processing with node and express. (segunda version).
 
 # Documentación para Funciones de Procesamiento de Imágenes.
 
